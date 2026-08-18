@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tables.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section id="elevinfo">
+        <h2>Elevinfo</h2>
+        <input type="number" id="ageInput" placeholder="Ålder">
+        <input type="text" id="firstNameInput" placeholder="Förnamn">
+        <input type="text" id="lastNameInput" placeholder="Efternamn">
+    </section>
+    <section id="resultatDeltest">
+        <h2>Resultat - deltest</h2>
+        <div>
+            <div id="muntligtPoäng"  class="rightBorder">
+                <h4>Muntlig uttrycksförmåga</h4>
+                <p>Råpoäng</p>
+                <p>Percentil</p>
+                <p>Std.poäng</p>
+                <p>Stanine</p>
+
+                <p>1. Auditiv analogi (AA)</p>
+                <input type=number id="AAinput">
+                <p class="computedValue AAperc">_</p>
+                <p class="computedValue AAstd">_</p>
+                <p class="computedValue AAstan">_</p>
+
+                <p>2. Ordförråd (OF)</p>
+                <input type=number id="OFinput">
+                <p class="computedValue OFperc">_</p>
+                <p class="computedValue OFstd">_</p>
+                <p class="computedValue OFstan">_</p>
+
+                <p>3. Grammatisk helhet (GH)</p>
+                <input type=number id="GHinput">
+                <p class="computedValue GHperc">_</p>
+                <p class="computedValue GHstd">_</p>
+                <p class="computedValue GHstan">_</p>
+
+                <p>4. Syntaktiska meningar (SM)</p>
+                <input type=number id="SMinput">
+                <p class="computedValue SMperc">_</p>
+                <p class="computedValue SMstd">_</p>
+                <p class="computedValue SMstan">_</p>
+
+                <p>5. Segmentsubtraktion (SS)</p>
+                <input type=number id="SSinput">
+                <p class="computedValue SSperc">_</p>
+                <p class="computedValue SSstd">_</p>
+                <p class="computedValue SSstan">_</p>
+
+                <p>6. Rimsekvenser (RS)</p>
+                <input type=number id="RSinput">
+                <p class="computedValue RSperc">_</p>
+                <p class="computedValue RSstd">_</p>
+                <p class="computedValue RSstan">_</p>
+            </div>
+            <div id="skriftligtPoäng" class="leftBorder">
+                <h4>Skriftspråk</h4>
+                <p>Råpoäng</p>
+                <p>Percentil</p>
+                <p>Std.poäng</p>
+                <p>Stanine</p>
+
+                <p>7. Meningssekvenser (MS)</p>
+                <input type=number id="MSinput">
+                <p class="computedValue MSperc">_</p>
+                <p class="computedValue MSstd">_</p>
+                <p class="computedValue MSstan">_</p>
+
+                <p>8. Skriva ord (SO)</p>
+                <input type=number id="SOinput">
+                <p class="computedValue SOperc">_</p>
+                <p class="computedValue SOstd">_</p>
+                <p class="computedValue SOstan">_</p>
+
+                <p>9. Avkodning (AK)</p>
+                <input type=number id="AKinput">
+                <p class="computedValue AKperc">_</p>
+                <p class="computedValue AKstd">_</p>
+                <p class="computedValue AKstan">_</p>
+
+                <p>10. Nonsensord (NO)</p>
+                <input type=number id="NOinput">
+                <p class="computedValue NOperc">_</p>
+                <p class="computedValue NOstd">_</p>
+                <p class="computedValue NOstan">_</p>
+
+                <p>11. Stavning - saknade bokstäver (SSB)</p>
+                <input type=number id="SSBinput">
+                <p class="computedValue SSBperc">_</p>
+                <p class="computedValue SSBstd">_</p>
+                <p class="computedValue SSBstan">_</p>
+
+                <p>12. Stavning ljud - bokstav (SLB)</p>
+                <input type=number id="SLBinput">
+                <p class="computedValue SLBperc">_</p>
+                <p class="computedValue SLBstd">_</p>
+                <p class="computedValue SLBstan">_</p>
+            </div>
+        </div>
+    </section>
+    <section id="resultatSamansatt">
+        <h2>Resultat - sammansatta skalor</h2>
+        <h4>ITPA-3 Standardpoäng per deltest</h4>
+        <div>
+            <h4 class="rightBorder">IPTA-3 Samansatta skalor<br>Globala skalor</h4>
+            <h4 class="leftBorder">AA</h4>
+            <h4>OF</h4>
+            <h4>GH</h4>
+            <h4>SM</h4>
+            <h4>SS</h4>
+            <h4>RS</h4>
+            <h4>MS</h4>
+            <h4>SO</h4>
+            <h4>AK</h4>
+            <h4>NO</h4>
+            <h4>SSB</h4>
+            <h4 class="rightBorder">SLB</h4>
+            <p class="leftBorder">Summa std.poäng</p>
+            <p>Kvot</p>
+            <p>Perc</p>
+            <p>Stanine</p>
+
+            <p class="rightBorder">Generell språkförmåga</p>
+            <p class="leftBorder computedValue AAstd">_</p>
+            <p class="computedValue OFstd">_</p>
+            <p class="computedValue GHstd">_</p>
+            <p class="computedValue SMstd">_</p>
+            <p class="computedValue SSstd">_</p>
+            <p class="computedValue RSstd">_</p>
+            <p class="computedValue MSstd">_</p>
+            <p class="computedValue SOstd">_</p>
+            <p class="computedValue AKstd">_</p>
+            <p class="computedValue NOstd">_</p>
+            <p class="computedValue SSBstd">_</p>
+            <p class="rightBorder computedValue SLBstd">_</p>
+            <p class="leftBorder computedValue generalSum">_</p>
+            <p class="computedValue generalKvot">_</p>
+            <p class="computedValue generalPerc">_</p>
+            <p class="computedValue generalStan">_</p>
+
+            <p class="rightBorder">Muntlig uttrycksförmåga</p>
+            <p class="leftBorder computedValue AAstd">_</p>
+            <p class="computedValue OFstd">_</p>
+            <p class="computedValue GHstd">_</p>
+            <p class="computedValue SMstd">_</p>
+            <p class="computedValue SSstd">_</p>
+            <p class="computedValue RSstd">_</p>
+
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue speakingSum">_</p>
+            <p class="computedValue speakingKvot">_</p>
+            <p class="computedValue speakingPerc">_</p>
+            <p class="computedValue speakingStan">_</p>
+
+            <p class="rightBorder">Skriftspråk</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+
+            <p class="computedValue MSstd">_</p>
+            <p class="computedValue SOstd">_</p>
+            <p class="computedValue AKstd">_</p>
+            <p class="computedValue NOstd">_</p>
+            <p class="computedValue SSBstd">_</p>
+            <p class="rightBorder computedValue SLBstd">_</p>
+            <p class="leftBorder computedValue writingSum">_</p>
+            <p class="computedValue writingKvot">_</p>
+            <p class="computedValue writingPerc">_</p>
+            <p class="computedValue writingStan">_</p>
+
+            <h4 class="rightBorder">Specifika skalor</h4>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+
+            <p class="rightBorder">Semantik</p>
+            <p class="leftBorder computedValue AAstd">_</p>
+            <p class="computedValue OFstd">_</p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue semanticSum">_</p>
+            <p class="computedValue semanticKvot">_</p>
+            <p class="computedValue semanticPerc">_</p>
+            <p class="computedValue semanticStan">_</p>
+
+            <p class="rightBorder">Grammatik</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue GHstd">_</p>
+            <p class="computedValue SMstd">_</p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue grammarSum">_</p>
+            <p class="computedValue grammarKvot">_</p>
+            <p class="computedValue grammarPerc">_</p>
+            <p class="computedValue grammarStan">_</p>
+
+            <p class="rightBorder">Fonologi</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue SSstd">_</p>
+            <p class="computedValue RSstd">_</p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue fonologySum">_</p>
+            <p class="computedValue fonologyKvot">_</p>
+            <p class="computedValue fonologyPerc">_</p>
+            <p class="computedValue fonologyStan">_</p>
+
+            <p class="rightBorder">Förståelse</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue MSstd">_</p>
+            <p class="computedValue SOstd">_</p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue understandingSum">_</p>
+            <p class="computedValue understandingKvot">_</p>
+            <p class="computedValue understandingPerc">_</p>
+            <p class="computedValue understandingStan">_</p>
+
+            <p class="rightBorder">Avkodning</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue AKstd">_</p>
+            <p class="computedValue NOstd">_</p>
+            <p class="empty"></p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue decodingSum">_</p>
+            <p class="computedValue decodingKvot">_</p>
+            <p class="computedValue decodingPerc">_</p>
+            <p class="computedValue decodingStan">_</p>
+
+            <p class="rightBorder">Stavning</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue SSBstd">_</p>
+            <p class="rightBorder computedValue SLBstd">_</p>
+            <p class="leftBorder computedValue spellingSum">_</p>
+            <p class="computedValue spellingKvot">_</p>
+            <p class="computedValue spellingPerc">_</p>
+            <p class="computedValue spellingStan">_</p>
+
+            <p class="rightBorder">Visuellt symbolprocessande</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue AKstd">_</p>
+            <p class="empty"></p>
+            <p class="computedValue SSBstd">_</p>
+            <p class="rightBorder empty"></p>
+            <p class="leftBorder computedValue visSymbProcSum">_</p>
+            <p class="computedValue visSymbProcKvot">_</p>
+            <p class="computedValue visSymbProcPerc">_</p>
+            <p class="computedValue visSymbProcStan">_</p>
+
+            <p class="rightBorder">Auditivt symbolprocessande</p>
+            <p class="leftBorder empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="empty"></p>
+            <p class="computedValue NOstd">_</p>
+            <p class="empty"></p>
+            <p class="rightBorder computedValue SLBstd">_</p>
+            <p class="leftBorder computedValue audSymbProcSum">_</p>
+            <p class="computedValue audSymbProcKvot">_</p>
+            <p class="computedValue audSymbProcPerc">_</p>
+            <p class="computedValue audSymbProcStan">_</p>
+        </div>
+    </section>
+    <section id="profil">
+        <h2>ITPA-3-Profil</h2>
+        <div id="diagrams">
+            <p class="leftBorder rightBorder" style="grid-area: GS">Globala skalor</p>
+            <p class="leftBorder rightBorder" style="grid-area: SS">Specifika skalor</p>
+            <p class="leftBorder rightBorder" style="grid-area: MU">Muntlig uttrycksförmåga</p>
+            <p class="leftBorder rightBorder" style="grid-area: S">Skriftspråk</p>
+            <p class="vertical leftBorder topBorder" style="grid-area: k">Kvot</p>
+            <p class="vertical rightBorder topBorder" style="grid-area: gs">Generell språkförmåga</p>
+            <p class="vertical topBorder" style="grid-area: mu">Muntlig uttrycksförmåga</p>
+            <p class="vertical leftBorder topBorder" style="grid-area: s">Skriftspråk</p>
+            <p class="vertical rightBorder topBorder" style="grid-area: se">Semantik</p>
+            <p class="vertical topBorder" style="grid-area: g">Grammatik</p>
+            <p class="vertical topBorder" style="grid-area: f">Fonologi</p>
+            <p class="vertical topBorder" style="grid-area: fs">Förståelse</p>
+            <p class="vertical topBorder" style="grid-area: a">Avkodning</p>
+            <p class="vertical topBorder" style="grid-area: st">Stavning</p>
+            <p class="vertical topBorder" style="grid-area: vsp">Visuellt symbolprocessande</p>
+            <p class="vertical leftBorder topBorder" style="grid-area: asp">Auditivt symbolprocessande</p>
+            <p class="vertical leftBorder rightBorder topBorder" style="grid-area: kk">Kvot</p>
+            <p class="vertical leftBorder rightBorder topBorder" style="grid-area: sp">Standardpoäng</p>
+            <p class="vertical rightBorder topBorder" style="grid-area: aa">Auditiv analogi</p>
+            <p class="vertical topBorder" style="grid-area: of">Ordförråd</p>
+            <p class="vertical topBorder" style="grid-area: gh">Grammatisk helhet</p>
+            <p class="vertical topBorder" style="grid-area: sm">Syntaktiska meningar</p>
+            <p class="vertical topBorder" style="grid-area: ss">Segmentsubtraktion</p>
+            <p class="vertical leftBorder topBorder" style="grid-area: rs">Rimsekvenser</p>
+            <p class="vertical rightBorder topBorder" style="grid-area: ms">Meningssekvenser</p>
+            <p class="vertical topBorder" style="grid-area: so">Skriva ord</p>
+            <p class="vertical topBorder" style="grid-area: av">Avkodning</p>
+            <p class="vertical topBorder" style="grid-area: n">Nonsensord</p>
+            <p class="vertical topBorder" style="grid-area: ssv">Stavning - saknade bokstäver</p>
+            <p class="vertical leftBorder topBorder" style="grid-area: slb">Stavning ljud - bokstav</p>
+            <p class="vertical rightBorder topBorder" style="grid-area: spsp">Standardpoäng</p>
+
+            <p class="topBorder">150</p>
+            <p class="rightBorder topBorder">150</p>
+            <p class="leftBorder topBorder">20</p>
+            <p class="topBorder">20</p>
+            <p>145</p>
+            <p class="rightBorder">145</p>
+            <p class="leftBorder">19</p>
+            <p>19</p>
+            <p>140</p>
+            <p class="rightBorder">140</p>
+            <p class="leftBorder">18</p>
+            <p>18</p>
+            <p>135</p>
+            <p class="rightBorder">135</p>
+            <p class="leftBorder">17</p>
+            <p>17</p>
+            <p>130</p>
+            <p class="rightBorder">130</p>
+            <p class="leftBorder">16</p>
+            <p>16</p>
+            <p>125</p>
+            <p class="rightBorder">125</p>
+            <p class="leftBorder">15</p>
+            <p>15</p>
+            <p>120</p>
+            <p class="rightBorder">120</p>
+            <p class="leftBorder">14</p>
+            <p>14</p>
+            <p>115</p>
+            <p class="rightBorder">115</p>
+            <p class="leftBorder">13</p>
+            <p>13</p>
+            <p>110</p>
+            <p class="rightBorder">110</p>
+            <p class="leftBorder">12</p>
+            <p>12</p>
+            <p>105</p>
+            <p class="rightBorder">105</p>
+            <p class="leftBorder">11</p>
+            <p>11</p>
+            <p>100</p>
+            <p class="rightBorder">100</p>
+            <p class="leftBorder">10</p>
+            <p>10</p>
+            <p>95</p>
+            <p class="rightBorder">95</p>
+            <p class="leftBorder">9</p>
+            <p>9</p>
+            <p>90</p>
+            <p class="rightBorder">90</p>
+            <p class="leftBorder">8</p>
+            <p>8</p>
+            <p>85</p>
+            <p class="rightBorder">85</p>
+            <p class="leftBorder">7</p>
+            <p>7</p>
+            <p>80</p>
+            <p class="rightBorder">80</p>
+            <p class="leftBorder">6</p>
+            <p>6</p>
+            <p>75</p>
+            <p class="rightBorder">75</p>
+            <p class="leftBorder">5</p>
+            <p>5</p>
+            <p>70</p>
+            <p class="rightBorder">70</p>
+            <p class="leftBorder">4</p>
+            <p>4</p>
+            <p>65</p>
+            <p class="rightBorder">65</p>
+            <p class="leftBorder">3</p>
+            <p>3</p>
+            <p>60</p>
+            <p class="rightBorder">60</p>
+            <p class="leftBorder">2</p>
+            <p>2</p>
+            <p class="bottomBorder">55</p>
+            <p class="rightBorder bottomBorder">55</p>
+            <p class="leftBorder bottomBorder">1</p>
+            <p>1</p>
+            <canvas class="bottomBorder topBorder" style="grid-area: kg;" id="kvotGraph"></canvas>
+            <canvas class="bottomBorder topBorder" style="grid-area: pg;" id="stdPointGraph"></canvas>
+        </div>
+    </section>
+    <section id="anteckningar">
+        <h2>Anteckningar</h3>
+
+        <button id="print">Print page</button>
+    </section>
+</body>
+
+</html>
